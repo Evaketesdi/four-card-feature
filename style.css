@@ -1,0 +1,96 @@
+:root {
+  --ff: "Poppins", sans-serif;
+  --ff-light: 200;
+  --ff-normal: 400;
+  --ff-bold: 600;
+
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-900: 2.5rem;
+
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding-block-end: 5rem;
+}
+html {
+  font-family: var(--ff);
+  font-weight: var(--ff-normal);
+  line-height: 1.7;
+  color: var(--grayish-blue);
+  background-color: var(--very-light-gray);
+}
+h1 {
+  font-size: var(--fs-900);
+  font-weight: var(--ff-light);
+}
+h1 span {
+  font-weight: var(--ff-bold);
+}
+h1,
+h2,
+h3 {
+  color: var(--very-dark-blue);
+  line-height: 1.2;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+.wrapper {
+  margin-inline: 3rem;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+.wrapper-narrow {
+  max-width: 550px;
+}
+header {
+  text-align: center;
+  margin-block: 6rem;
+}
+.grid-layout {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.col {
+  flex: 1;
+  display: grid;
+  gap: 2rem;
+  align-content: center;
+}
+.card {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.35rem;
+  box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15);
+  border-top: solid 0.35rem;
+}
+.border-red {
+  border-color: var(--red);
+}
+.border-cyan {
+  border-color: var(--cyan);
+}
+.border-orange {
+  border-color: var(--orange);
+}
+.border-blue {
+  border-color: var(--blue);
+}
